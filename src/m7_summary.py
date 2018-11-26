@@ -5,13 +5,13 @@ Authors: David Mutchler, Vibha Alangar, Matt Boutell, Dave Fisher,
          Aaron Wilkin, their colleagues, and James Kelley.
 """
 ########################################################################
-# TODO: 1.
+# DONE: 1.
 #   On Line 5 above, replace  PUT_YOUR_NAME_HERE  with your own name.
 ########################################################################
 
 ########################################################################
 #
-# TODO: 2.
+# DONE: 2.
 #   Write code that accomplishes the following (and ONLY the following),
 #   in the order listed:
 #
@@ -43,3 +43,23 @@ Authors: David Mutchler, Vibha Alangar, Matt Boutell, Dave Fisher,
 #   As always, COMMIT-and-PUSH when you are done with this module.
 #
 ########################################################################
+import rosegraphics as rg
+
+window = rg.TurtleWindow()
+
+lois = rg.SimpleTurtle()
+lois.pen = rg.Pen('blue', 1)
+
+lois.left(90)
+lois.forward(200)
+
+lois.pen_up()
+lois.go_to(rg.Point(100, -40))
+lois.pen_down()
+
+lois.pen = rg.Pen('green', 10)
+
+lois.left(180)
+lois.forward(150)
+
+window.close_on_mouse_click()
